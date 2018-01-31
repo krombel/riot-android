@@ -9,13 +9,18 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
 
     <!-- universal links management -->
-    <uses-permission android:name="android.permission.REORDER_TASKS" />
-    <!-- for android 4.1.* devices, reported by GA -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" tools:node="remove" />
+
+    <!-- for android 4.1.* devices, reported by GA
     <uses-permission android:name="android.permission.GET_TASKS" />
+     -->
 
     <!-- videocall permissions-->
     <uses-permission android:name="android.permission.CAMERA" />
@@ -23,7 +28,9 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <!-- required on android 6.0.0 devices -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    -->
 
     <!-- shared files from external application -->
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
@@ -34,8 +41,9 @@
     <!-- start the background sync on boot -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <!-- disable the battery optimisation on some devices to let the background sync works -->
+    <!-- disable the battery optimisation on some devices to let the background sync works
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+     -->
 
     <!-- videocall feature-->
     <!-- android.permission.CAMERA defines android.hardware.camera -->
@@ -75,16 +83,17 @@
     <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
 
     <!-- bluetooth headset -->
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" tools:node="remove" />
+    <uses-permission android:name="android.permission.BLUETOOTH" tools:node="remove" />
 
     <uses-feature
         android:name="android.hardware.bluetooth"
         android:required="false"
         tools:replace="required" />
 
-    <!-- jitsi -->
+    <!-- jitsi
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+ -->
     <uses-feature android:name="android.hardware.telephony" android:required="false"/>
 
     <application

@@ -43,6 +43,7 @@ import android.util.Pair;
 
 import org.matrix.androidsdk.MXSession;
 import org.matrix.androidsdk.util.Log;
+/*
 import org.piwik.sdk.Piwik;
 import org.piwik.sdk.QueryParams;
 import org.piwik.sdk.TrackMe;
@@ -50,6 +51,7 @@ import org.piwik.sdk.Tracker;
 import org.piwik.sdk.TrackerConfig;
 import org.piwik.sdk.extra.CustomVariables;
 import org.piwik.sdk.extra.TrackHelper;
+*/
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -1186,7 +1188,7 @@ public class VectorApp extends MultiDexApplication {
     //==============================================================================================================
 
     // the piwik tracker
-    private Tracker mPiwikTracker;
+    // private Tracker mPiwikTracker;
 
     /**
      * Set the visit variable
@@ -1195,15 +1197,18 @@ public class VectorApp extends MultiDexApplication {
      * @param name
      * @param value
      */
+    /*
     private static final void visitVariables(TrackMe trackMe, int id, String name, String value) {
         CustomVariables customVariables = new CustomVariables(trackMe.get(QueryParams.VISIT_SCOPE_CUSTOM_VARIABLES));
         customVariables.put(id, name, value);
         trackMe.set(QueryParams.VISIT_SCOPE_CUSTOM_VARIABLES, customVariables.toString());
     }
+    */
 
     /**
      * @return the piwik instance
      */
+    /*
     private Tracker getPiwikTracker() {
         if (mPiwikTracker == null) {
             try {
@@ -1232,6 +1237,7 @@ public class VectorApp extends MultiDexApplication {
 
         return mPiwikTracker;
     }
+    */
 
 
     /**
@@ -1239,6 +1245,7 @@ public class VectorApp extends MultiDexApplication {
      *
      * @return the piwik screen
      */
+    /*
     private TrackHelper.Screen addCustomVariables(TrackHelper.Screen screen) {
         screen.variable(1, "App Platform", "Android Platform");
         screen.variable(2, "App Version", SHORT_VERSION);
@@ -1253,12 +1260,14 @@ public class VectorApp extends MultiDexApplication {
 
         return screen;
     }
+    */
 
     /**
      * A new activity has been resumed
      * @param activity the new activity
      */
     private void onNewScreen(Activity activity) {
+	    /*
         if (PreferencesManager.trackWithPiwik(this)) {
             Tracker tracker = getPiwikTracker();
             if (null != tracker) {
@@ -1270,6 +1279,7 @@ public class VectorApp extends MultiDexApplication {
                 }
             }
         }
+	*/
     }
 
 
@@ -1277,6 +1287,7 @@ public class VectorApp extends MultiDexApplication {
      * The application is paused.
      */
     private void onAppPause() {
+	    /*
         if (PreferencesManager.trackWithPiwik(this)) {
             Tracker tracker = getPiwikTracker();
             if (null != tracker) {
@@ -1288,5 +1299,6 @@ public class VectorApp extends MultiDexApplication {
                 }
             }
         }
+	*/
     }
 }
