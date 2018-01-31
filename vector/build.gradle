@@ -139,7 +139,7 @@ dependencies {
 
     compile 'com.android.support:multidex:1.0.0'
 
-    compile 'me.leolin:ShortcutBadger:1.1.2@aar'
+    // compile 'me.leolin:ShortcutBadger:1.1.2@aar'
 
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
