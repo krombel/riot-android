@@ -22,10 +22,12 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
      -->
 
-    <!-- videocall permissions-->
     <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- videocall permissions
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+-->
     <!-- required on android 6.0.0 devices -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!--
@@ -67,13 +69,14 @@
         android:required="false"
         tools:replace="required" />
 
-    <!-- android.permission.RECORD_AUDIO defines android.hardware.microphone -->
+    <!-- android.permission.RECORD_AUDIO defines android.hardware.microphone
     <uses-feature
         android:name="android.hardware.microphone"
         android:required="false"
-        tools:replace="required" />
+	tools:replace="required" />
+-->
 
-    <!-- ShortcutBadger permissions-->
+    <!-- ShortcutBadger permissions
     <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
     <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
@@ -81,8 +84,9 @@
     <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
     <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
     <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+-->
 
-    <!-- bluetooth headset -->
+    <!-- bluetooth headset
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" tools:node="remove" />
     <uses-permission android:name="android.permission.BLUETOOTH" tools:node="remove" />
 
@@ -90,11 +94,12 @@
         android:name="android.hardware.bluetooth"
         android:required="false"
         tools:replace="required" />
+ -->
 
     <!-- jitsi
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
- -->
     <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+ -->
 
     <application
         android:name="im.vector.VectorApp"
