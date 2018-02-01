@@ -9,21 +9,30 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
 
     <!-- universal links management -->
-    <uses-permission android:name="android.permission.REORDER_TASKS" />
-    <!-- for android 4.1.* devices, reported by GA -->
-    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" tools:node="remove" />
 
-    <!-- videocall permissions-->
+    <!-- for android 4.1.* devices, reported by GA
+    <uses-permission android:name="android.permission.GET_TASKS" />
+     -->
+
     <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- videocall permissions
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+-->
     <!-- required on android 6.0.0 devices -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    -->
 
     <!-- shared files from external application -->
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
@@ -34,8 +43,9 @@
     <!-- start the background sync on boot -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <!-- disable the battery optimisation on some devices to let the background sync works -->
+    <!-- disable the battery optimisation on some devices to let the background sync works
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+     -->
 
     <!-- videocall feature-->
     <!-- android.permission.CAMERA defines android.hardware.camera -->
@@ -59,13 +69,14 @@
         android:required="false"
         tools:replace="required" />
 
-    <!-- android.permission.RECORD_AUDIO defines android.hardware.microphone -->
+    <!-- android.permission.RECORD_AUDIO defines android.hardware.microphone
     <uses-feature
         android:name="android.hardware.microphone"
         android:required="false"
-        tools:replace="required" />
+	tools:replace="required" />
+-->
 
-    <!-- ShortcutBadger permissions-->
+    <!-- ShortcutBadger permissions
     <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
     <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
@@ -73,19 +84,22 @@
     <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
     <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
     <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+-->
 
-    <!-- bluetooth headset -->
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- bluetooth headset
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" tools:node="remove" />
+    <uses-permission android:name="android.permission.BLUETOOTH" tools:node="remove" />
 
     <uses-feature
         android:name="android.hardware.bluetooth"
         android:required="false"
         tools:replace="required" />
+ -->
 
-    <!-- jitsi -->
+    <!-- jitsi
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+ -->
 
     <application
         android:name="im.vector.VectorApp"
@@ -103,7 +117,7 @@
             android:name="im.vector.activity.LoginActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/LoginAppTheme"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -472,6 +486,16 @@
         </receiver>
 
         <receiver android:name="im.vector.receiver.DismissNotificationReceiver"/>
+
+        <receiver
+            android:name="im.vector.receiver.VectorReferrerReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
 
         <!-- Shared items  -->
         <activity

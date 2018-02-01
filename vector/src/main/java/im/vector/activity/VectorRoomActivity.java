@@ -1078,11 +1078,14 @@ public class VectorRoomActivity extends MXCActionBarActivity implements MatrixMe
             }
 
             private void onCallClick(Widget widget, boolean isVideo) {
+               Toast.makeText(VectorRoomActivity.this, "This version doesn't have advanced features", Toast.LENGTH_LONG).show();
+		    /*
                 if (null != widget) {
                     launchJitsiActivity(widget, isVideo);
                 } else {
                     startCall(isVideo);
                 }
+		*/
             }
 
             @Override
@@ -1791,12 +1794,14 @@ public class VectorRoomActivity extends MXCActionBarActivity implements MatrixMe
      * @param widget       the widget
      * @param aIsVideoCall true if it is a video call
      */
+    /*
     private void launchJitsiActivity(Widget widget, boolean aIsVideoCall) {
         final Intent intent = new Intent(VectorRoomActivity.this, JitsiCallActivity.class);
         intent.putExtra(JitsiCallActivity.EXTRA_WIDGET_ID, widget);
         intent.putExtra(JitsiCallActivity.EXTRA_ENABLE_VIDEO, aIsVideoCall);
         VectorRoomActivity.this.startActivity(intent);
     }
+    */
 
     /**
      * Start a jisti call
@@ -1804,6 +1809,8 @@ public class VectorRoomActivity extends MXCActionBarActivity implements MatrixMe
      * @param aIsVideoCall true if the call is a video one
      */
     private void startJitsiCall(final boolean aIsVideoCall) {
+        Toast.makeText(VectorRoomActivity.this, "This version doesn't have advanced features", Toast.LENGTH_LONG).show();
+	/*
         enableActionBarHeader(HIDE_ACTION_BAR_HEADER);
         setProgressVisibility(View.VISIBLE);
 
@@ -1837,6 +1844,7 @@ public class VectorRoomActivity extends MXCActionBarActivity implements MatrixMe
                 onError(e.getLocalizedMessage());
             }
         });
+	*/
     }
 
     /**

@@ -139,7 +139,7 @@ dependencies {
 
     compile 'com.android.support:multidex:1.0.0'
 
-    compile 'me.leolin:ShortcutBadger:1.1.2@aar'
+    // compile 'me.leolin:ShortcutBadger:1.1.2@aar'
 
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
@@ -166,32 +166,32 @@ dependencies {
     compile(name: 'olm-sdk', ext: 'aar')
 
     /************* jitsi **************/
-    compile 'javax.inject:javax.inject:1'
+    // compile 'javax.inject:javax.inject:1'
 
     compile 'com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0'
     compile 'com.facebook.fresco:fresco:1.3.0'
     compile 'com.facebook.fresco:imagepipeline-okhttp3:1.3.0'
     compile 'com.facebook.soloader:soloader:0.1.0'
     compile 'com.google.code.findbugs:jsr305:3.0.0'
+    // compile 'com.google.code.findbugs:jsr305:3.0.0'
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
     compile 'com.squareup.okio:okio:1.13.0'
     compile 'org.webkit:android-jsc:r174650'
 
 
-    compile(name: 'jitsi-sdk', ext: 'aar')
-    compile(name: 'react-native-background-timer', ext: 'aar')
-    compile(name: 'react-native-fetch-blob', ext: 'aar')
-    compile(name: 'react-native-immersive', ext: 'aar')
-    compile(name: 'react-native-keep-awake', ext: 'aar')
-    compile(name: 'react-native-vector-icons', ext: 'aar')
-    compile(name: 'react-native-webrtc', ext: 'aar')
-    compile(name: 'react-native', ext: 'aar')
-    compile(name: 'react-native-locale-detector', ext: 'aar')
-
+    // compile(name: 'jitsi-sdk', ext: 'aar')
+    // compile(name: 'react-native-background-timer', ext: 'aar')
+    // compile(name: 'react-native-fetch-blob', ext: 'aar')
+    // compile(name: 'react-native-immersive', ext: 'aar')
+    // compile(name: 'react-native-keep-awake', ext: 'aar')
+    // compile(name: 'react-native-vector-icons', ext: 'aar')
+    // compile(name: 'react-native-webrtc', ext: 'aar')
+    // compile(name: 'react-native', ext: 'aar')
+    // compile(name: 'react-native-locale-detector', ext: 'aar')
 
     // another tracking than GA
-    compile 'org.piwik.sdk:piwik-sdk:2.0.0'
+    // compile 'org.piwik.sdk:piwik-sdk:2.0.0'
 
     // use the matrix SDK as a part of the project
     // you have to uncomment some lines in settings.gradle

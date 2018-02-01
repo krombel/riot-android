@@ -1,3 +1,31 @@
+Changes in Riot 0.7.09 (2018-01-16)
+===================================================
+  
+Improvements:
+
+  * Update to the latest JITSI libs
+  * Add some scripts to build the required libs.
+ 
+Bugfixes:
+ 
+  * #1859 : After a user redacted their own join event from HQ, Android DoSes us with /context requests.
+
+Changes in Riot 0.7.08 (2018-01-12)
+===================================================
+ 
+Bugfixes:
+
+ * Fix the account creation
+
+Changes in Riot 0.7.07 (2018-01-03)
+===================================================
+ 
+Bugfixes:
+
+ * Improve piwik management.
+ * fix #1802 : Expected status header not present (until we update OkHttp to 3.X)
+ * fix widget management
+ 
 Changes in Riot 0.7.06 (2017-12-06)
 ===================================================
 
