@@ -1210,11 +1210,13 @@ public class VectorApp extends MultiDexApplication {
      * @param name
      * @param value
      */
+    /*
     private static final void visitVariables(TrackMe trackMe, int id, String name, String value) {
         CustomVariables customVariables = new CustomVariables(trackMe.get(QueryParams.VISIT_SCOPE_CUSTOM_VARIABLES));
         customVariables.put(id, name, value);
         trackMe.set(QueryParams.VISIT_SCOPE_CUSTOM_VARIABLES, customVariables.toString());
     }
+    */
 
     /**
      * @return the piwik instance
@@ -1279,6 +1281,7 @@ public class VectorApp extends MultiDexApplication {
      *
      * @return the piwik screen
      */
+    /*
     private TrackHelper.Screen addCustomVariables(TrackHelper.Screen screen) {
         screen.variable(1, "App Platform", "Android Platform");
         screen.variable(2, "App Version", SHORT_VERSION);
@@ -1293,16 +1296,14 @@ public class VectorApp extends MultiDexApplication {
 
         return screen;
     }
+    */
 
     /**
      * A new activity has been resumed
      * @param activity the new activity
      */
     private void onNewScreen(Activity activity) {
-<<<<<<< HEAD
-=======
 	    /*
->>>>>>> limified
         if (PreferencesManager.trackWithPiwik(this)) {
             Tracker tracker = getPiwikTracker();
             if (null != tracker) {
