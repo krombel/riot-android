@@ -775,8 +775,6 @@
     <string name="notification_noisy_notifications">Гучне повідомлення</string>
     <string name="notification_silent_notifications">Тихе повідомлення</string>
 
-    <string name="title_activity_bug_report">Відгук про помилку</string>
-
     <string name="option_take_photo">Зробити фото</string>
     <string name="option_take_video">Записати відео</string>
 
