@@ -102,7 +102,7 @@
  -->
 
     <application
-        android:name="im.vector.VectorApp"
+        android:name="com.lavadip.miniVector"
         android:allowBackup="false"
         android:icon="@drawable/logo"
         android:label="@string/riot_app_name"
