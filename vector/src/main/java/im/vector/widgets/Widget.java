@@ -62,19 +62,11 @@ public class Widget implements Serializable {
         }
 
         if (null != mWidgetContent.data) {
-<<<<<<< HEAD
-            for(String key : mWidgetContent.data.keySet()) {
-                Object valueAsVoid = mWidgetContent.data.get(key);
-
-                if (valueAsVoid instanceof String) {
-                    mUrl = mUrl.replace("$" + key, URLEncoder.encode((String)valueAsVoid, "utf-8"));
-=======
             for (String key : mWidgetContent.data.keySet()) {
                 Object valueAsVoid = mWidgetContent.data.get(key);
 
                 if (valueAsVoid instanceof String) {
                     mUrl = mUrl.replace("$" + key, URLEncoder.encode((String) valueAsVoid, "utf-8"));
->>>>>>> upstream/master
                 }
             }
         }
