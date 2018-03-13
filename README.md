@@ -9,10 +9,17 @@ miniVector
    * React native libraries
    * Application Icon badger
    * Analytics
-  		  
- I built this mainly for my use. Links to Play Store and FDroid will be added later if there's sufficient interest from others.
 
-The rest of this readme is the original readme.
+ 
+### Links
+
+* [PlayStore](https://play.google.com/store/apps/details?id=com.lavadip.miniVector)
+* FDroid build, coming soon. Issue [#3](https://github.com/LiMium/mini-vector-android/issues/3)
+* Matrix chat room: `#miniVectorAndroid:matrix.org`
+
+-----
+
+ The rest of this readme is the original readme from riot-android.
 
 -----
 
