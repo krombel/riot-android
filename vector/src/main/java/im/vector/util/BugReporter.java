@@ -38,7 +38,6 @@ import android.content.pm.PackageInfo;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Build;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.matrix.androidsdk.MXSession;
@@ -46,6 +45,7 @@ import org.matrix.androidsdk.util.Log;
 
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Toast;
 
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.MediaType;
@@ -409,6 +409,10 @@ public class BugReporter {
      * Send a bug report either with email or with Vector.
      */
     public static void sendBugReport() {
+      Toast.makeText(VectorApp.getInstance().getApplicationContext(), "Bug reporting is currently disabled, sorry!", Toast.LENGTH_LONG).show();
+    }
+
+    private static void sendBugReportDisabled() {
         mScreenshot = takeScreenshot();
 
         final Activity currentActivity = VectorApp.getCurrentActivity();
