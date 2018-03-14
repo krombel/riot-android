@@ -345,6 +345,7 @@
 
     <im.vector.preference.VectorDividerCategory />
 
+    <!-- Since we have disable tracking in code, there is no need for this setting
     <PreferenceCategory
         android:key="SETTINGS_ANALYTICS_PREFERENCE_KEY"
         android:title="@string/settings_analytics">
@@ -362,6 +363,7 @@
     </PreferenceCategory>
 
     <im.vector.preference.VectorDividerCategory />
+    -->
 
     <PreferenceCategory
         android:key="SETTINGS_OTHERS_PREFERENCE_KEY"
