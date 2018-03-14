@@ -111,6 +111,10 @@ public class BugReporter {
     // boolean to cancel the bug report
     private static boolean mIsCancelled = false;
 
+    public static void sendBugReport(final Context context, final boolean withDevicesLogs, final boolean withCrashLogs, final boolean withScreenshot, final String theBugDescription, final IMXBugReportListener listener) {
+      Toast.makeText(VectorApp.getInstance().getApplicationContext(), "Bug reporting is currently disabled, sorry!", Toast.LENGTH_LONG).show();
+    }
+
     /**
      * Send a bug report.
      *
@@ -121,7 +125,7 @@ public class BugReporter {
      * @param theBugDescription the bug description
      * @param listener          the listener
      */
-    public static void sendBugReport(final Context context, final boolean withDevicesLogs, final boolean withCrashLogs, final boolean withScreenshot, final String theBugDescription, final IMXBugReportListener listener) {
+    public static void sendBugReportDisabled(final Context context, final boolean withDevicesLogs, final boolean withCrashLogs, final boolean withScreenshot, final String theBugDescription, final IMXBugReportListener listener) {
         new AsyncTask<Void, Integer, String>() {
 
             // enumerate files to delete
