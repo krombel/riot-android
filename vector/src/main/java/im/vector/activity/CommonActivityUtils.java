@@ -1893,9 +1893,9 @@ public class CommonActivityUtils {
                     ByteArrayInputStream stream = new ByteArrayInputStream(bytesArray);
                     String url = session.getMediasCache().saveMedia(stream, "riot-" + System.currentTimeMillis() + ".txt", "text/plain");
                     stream.close();
-
-                    CommonActivityUtils.saveMediaIntoDownloads(appContext,
-                            new File(Uri.parse(url).getPath()), "riot-keys.txt", "text/plain", new SimpleApiCallback<String>() {
+                    File tmpFile = new File(Uri.parse(url).getPath());
+                    CommonActivityUtils.saveMediaIntoDownloads(appContext, tmpFile,
+                            "riot-keys.txt", "text/plain", new SimpleApiCallback<String>() {
                                 @Override
                                 public void onSuccess(String path) {
                                     if (null != callback) {
@@ -1924,6 +1924,7 @@ public class CommonActivityUtils {
                                     }
                                 }
                             });
+                    tmpFile.deleteOnExit();
                 } catch (Exception e) {
                     if (null != callback) {
                         callback.onMatrixError(new MatrixError(null, e.getLocalizedMessage()));
